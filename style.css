@@ -16,7 +16,7 @@ body {
     top: 0;
     left: 0;
     width: 100vw;                  
-    padding: 50px 60px;            
+    padding: 20px 60px;            
     border-radius: 0;              
     background: #0b2e55;
     color: white;
@@ -48,6 +48,7 @@ body {
 .app {
     background-color: #0b2e55;
     margin: 0;
+    margin-top: 50px;
     width: 360px;
     min-height: 500px;
     background: #aaaaaa;
@@ -56,10 +57,6 @@ body {
     display: flex;
     flex-direction: column;
     z-index: 10;
-    position: absolute;
-    top: 64%;
-    left: 50%;
-    transform: translate(-50%, -50%);
 }
 
 .app-header {
@@ -79,7 +76,27 @@ body {
 }
 
 .task-list {
-    text-align: center;
     list-style-position: inside;
+    list-style: none;
     padding: 0;
+    margin: 0 auto;
+    height: 400px;
+    width: fit-content;
+    overflow-y: scroll;
+}
+
+.task-list li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+}
+
+.task-list li span {
+    flex: 1;
+}
+
+.done {
+  text-decoration: line-through;
+  opacity: 0.6; 
 }

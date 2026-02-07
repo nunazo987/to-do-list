@@ -8,8 +8,19 @@ button.addEventListener('click', (e) => {
     if (text === '') return;
 
     const li = document.createElement('li');
-    li.textContent = text;
 
+    const span = document.createElement('span');
+    span.textContent = text;
+
+    span.addEventListener('click', () => {
+        span.classList.toggle('done');
+    });
+
+    li.appendChild(span);
     taskList.appendChild(li);
+
     input.value = '';
-})
+});
+
+
+
