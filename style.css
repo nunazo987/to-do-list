@@ -7,7 +7,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    min-height: 100vw;
+    min-height: 100vh;
     overflow: hidden;
 }
 
@@ -15,7 +15,7 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100vw;                  
+    width: 100%;                  
     padding: 20px 60px;            
     border-radius: 0;              
     background: #0b2e55;
@@ -57,6 +57,7 @@ body {
     display: flex;
     flex-direction: column;
     z-index: 10;
+    align-items: center;
 }
 
 .app-header {
@@ -80,9 +81,10 @@ body {
     list-style: none;
     padding: 0;
     margin: 0 auto;
-    height: 400px;
-    width: fit-content;
-    overflow-y: scroll;
+    max-height: 300px;
+    width: 100;
+    max-width: 280px;
+    overflow-y: auto;
 }
 
 .task-list li {
@@ -99,4 +101,13 @@ body {
 .done {
   text-decoration: line-through;
   opacity: 0.6; 
+}
+
+.remove {
+    background: transparent;
+    border: none;
+    color: red;
+    font-size: 1.2em;
+    cursor: pointer;
+    margin-left: 8px;
 }
