@@ -17,9 +17,11 @@ button.addEventListener('click', (e) => {
 
     span.addEventListener('click', () => {
         span.classList.toggle('done');
+        
+        const botao2 = li.querySelector('.remove');
 
         if (span.classList.contains('done')){
-            if (!li.querySelector('.remove')){
+            if (!botao2){
                 const botaoRemover = document.createElement('button');
                 botaoRemover.textContent = 'x';
                 botaoRemover.className = 'remove';
@@ -31,8 +33,7 @@ button.addEventListener('click', (e) => {
                 li.appendChild(botaoRemover);
         }
     } else {
-        const botao = li.querySelector('.remove');
-        if (btn) li.removeChild(btn);
+        if (botao2) li.removeChild(botao2);
     }
         reorderTasks();
     });
